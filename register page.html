@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <script>
+        alert('Welcome to Alexzzy Online Courses Registration form');
+    </script>
+    <style>
+        body{
+            background-color: powderblue;
+            align-items: center;
+            text-align: center;
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+        }
+        .input-type{
+            padding-left: 30px;
+            border-radius: 30px;
+            background-color: rgba(17, 8, 8, 0.3);
+            font-family: Arial, Helvetica, sans-serif;
+            width: 43%;
+            align-self: center;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+        input{
+            padding: 5px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 220px;
+            height: 22px;
+            background-color: transparent;
+        }
+        ::placeholder{
+            color: white;
+            margin: 13px;
+        }
+        button {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+            width: 40%;
+            text-align: center;
+            align-items: center;
+            margin: 30px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <div class="input-type">
+        
+        <h1>REGISTRATION FORM</h1>
+        <img style="border-color: azure; border-style: solid; width: 100px; height: 100px; border-radius: 9px;" src="#" id="newImg"><br>
+        <input type="file" id="imgfil">
+        <script>
+            imgfil.onchange= evt =>
+        {
+            const[file]= imgfil.files
+            if(file)
+        {
+            newImg.src=URL.createObjectURL(file)
+        }
+        }
+        </script>
+        <table>
+            <tr>
+                <td><input type="text" placeholder="Enter Firstname" required><br>
+                    <input type="text" placeholder="Enter Middlename" required><br>
+                    <input type="text" placeholder="Enter Lastname" required><br>
+                    <input type="email" placeholder="Enter Email" required><br>
+                    <input type="password" placeholder="Enter Password" required><br>
+                    <input type="password" placeholder="Confirm Password" required><br>
+                    <input type="date"><br>
+                    </td>
+                <td>
+                    <input type="text" placeholder="Gender" required><br>
+                    <input type="text" placeholder="State" required><br>
+                    <input type="text" placeholder="LGA" required><br>
+                    <input type="text" placeholder="Town" required><br>
+                    <input type="text" placeholder="Sponsor Name" required><br>
+                    <input type="number" placeholder="Phone Number" required></td>
+                    
+            </tr>
+        </table>
+        <a href="successful.html"><button>Submit</button></a>
+</body>
+</html>
